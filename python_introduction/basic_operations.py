@@ -1,4 +1,6 @@
-ddition = number1 + number2 
+number1 = 10
+number2 = 5
+addition = number1 + number2 
 print("Addition = number1 + number2: "+ addition) 
 subtraction = number1 - number2 
 print("Subtraction = number1 - number2: " +subtraction)
