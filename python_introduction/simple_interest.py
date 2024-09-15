@@ -1,4 +1,3 @@
-imple_interest.py
 
 # Define the variables
 principal = 1000  # Principal amount in dollars
