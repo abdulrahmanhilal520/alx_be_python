@@ -1,22 +1,40 @@
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Choose the operation (+, -, *, /): ")
+# match_case_calculator.py
 
-match operation:
-    case '+':
-        total = num1 + num2
-        print(f"The value of the operation is: {total}")
-    case '-':
-        total = num1 - num2
-        print(f"The value of the operation is: {total}")
-    case '*':
-        total = num1 * num2
-        print(f"The value of the operation is: {total}")
-    case '/':
-        if num2 != 0:
-            total = num1 / num2
-            print(f"The value of the operation is: {total}")
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+def get_operation():
+    while True:
+        operation = input("Choose the operation (+, -, *, /): ")
+        if operation in ['+', '-', '*', '/']:
+            return operation
         else:
-            print("Error: Division by zero is not allowed.")
-    case _:
-        print("Invalid operation. Please choose one of (+, -, *, /).")
+            print("Invalid operation. Please choose from +, -, *, /.")
+
+def calculate(num1, num2, operation):
+    match operation:
+        case '+':
+            return num1 + num2
+        case '-':
+            return num1 - num2
+        case '*':
+            return num1 * num2
+        case '/':
+            if num2 != 0:
+                return num1 / num2
+            else:
+                return "Cannot divide by zero."
+
+def main():
+    num1 = get_number("Enter the first number: ")
+    num2 = get_number("Enter the second number: ")
+    operation = get_operation()
+    result = calculate(num1, num2, operation)
+    print(f"The result is {result}")
+
+if __name__ == "__main__":
+    main()
