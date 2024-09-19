@@ -4,15 +4,13 @@ operations = str(input("choice the operation (+, -, *, /): "))
 
 match operations:
         case '+':
-                    total = num1 + num2
-                            print(f"the value of operation equal to:{total} ")
+             total = num1 + num2
+             print(f"the value of operation equal to:{total} ")
                                
-                                   case '-':
-                                               total = num1 - num2
-                                                       print(f"the value of operation equal to:{total} ")
+        case '-':
+             total = num1 - num2
+             print(f"the value of operation equal to:{total} ")
                                                                
-                                                                   case '*':
-                                                                               total = num1 * num2
-                                                                                       print(f"the value of operation equal to:{total} ")
-                                                                                          
-                                                                                             
+        case '*':
+             total = num1 * num2
+             print(f"the value of operation equal to:{total} ")                                                                                                                                                    
