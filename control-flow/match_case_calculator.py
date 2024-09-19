@@ -1,16 +1,22 @@
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
-operations = str(input("choice the operation (+, -, *, /): "))
+operation = input("Choose the operation (+, -, *, /): ")
 
-match operations:
-        case '+':
-             total = num1 + num2
-             print(f"the value of operation equal to:{total} ")
-                               
-        case '-':
-             total = num1 - num2
-             print(f"the value of operation equal to:{total} ")
-                                                               
-        case '*':
-             total = num1 * num2
-             print(f"the value of operation equal to:{total} ")                                                                                                                                                    
+match operation:
+    case '+':
+        total = num1 + num2
+        print(f"The value of the operation is: {total}")
+    case '-':
+        total = num1 - num2
+        print(f"The value of the operation is: {total}")
+    case '*':
+        total = num1 * num2
+        print(f"The value of the operation is: {total}")
+    case '/':
+        if num2 != 0:
+            total = num1 / num2
+            print(f"The value of the operation is: {total}")
+        else:
+            print("Error: Division by zero is not allowed.")
+    case _:
+        print("Invalid operation. Please choose one of (+, -, *, /).")
