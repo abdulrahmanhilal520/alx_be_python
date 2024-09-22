@@ -1,24 +1,28 @@
-# Prompt for the task
+# طلب إدخال وصف المهمة
 task = input("Enter your task: ")
-priority = input("Priority (high/medium/low): ").lower()
-time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# Process the task based on priority and time sensitivity
-reminder = f"Reminder: '{task}' is a {priority} priority task"
+# طلب إدخال أولوية المهمة
+priority = input("Priority (high/medium/low): ")
 
-match priority:
-    case "high":
-        reminder += " that requires immediate attention!"
-        if time_bound == "yes":
-            reminder += " It is time-sensitive and needs to be done today!"
-    case "medium":
-        reminder += ". Try to complete it soon."
-        if time_bound == "yes":
-            reminder += " It is time-sensitive and needs to be done today!"
-    case "low":
-        reminder += ". Consider completing it when you have free time."
-        if time_bound == "yes":
-            reminder += " It is time-sensitive and needs to be done today!"
+# طلب إدخال ما إذا كانت المهمة محددة بوقت
+time_bound = input("Is it time-bound? (yes/no): ")
 
-# Provide a customized reminder
-print(reminder)
+# معالجة المهمة بناءً على الأولوية وحساسية الوقت
+reminder = ""
+
+# استخدام Match Case لمعالجة الأولوية
+if priority == "high":
+    reminder = f"'{task}' is a high priority task"
+elif priority == "medium":
+    reminder = f"'{task}' is a medium priority task"
+elif priority == "low":
+    reminder = f"'{task}' is a low priority task"
+
+# تعديل التذكير إذا كانت المهمة محددة بوقت
+if time_bound == "yes":
+    reminder += " that requires immediate attention today!"
+else:
+    reminder += ". Consider completing it when you have free time."
+
+# طباعة التذكير المخصص
+print("Reminder:", reminder)
