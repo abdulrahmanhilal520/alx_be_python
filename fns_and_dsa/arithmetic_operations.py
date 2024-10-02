@@ -3,16 +3,16 @@ def perform_operation(num1,num2,operation):
     
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
-    operation = input("choice the operation (+,-,x,/): ")
+    operation = input("Enter the operation (add, subtract, multiply, divide): ")
     
     match operation:
-        case '+':
+        case "add":
             result = num1 + num2
-        case '-':
+        case "subtract":
             result = num1 - num2
-        case 'x':
+        case "multiply":
             result = num1 * num2
-        case '/':
+        case "divide":
             if num2 != 0:
                 result = num1 / num2
             else:
@@ -28,5 +28,5 @@ num2 = 3
 operation = 'add'
 result = perform_operation(num1, num2, operation)
 
-if result is not None:
-    print(f"result: {result}")
+if __name__ == "__main__":
+    main()
