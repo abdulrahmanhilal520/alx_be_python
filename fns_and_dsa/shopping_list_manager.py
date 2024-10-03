@@ -16,7 +16,8 @@ def main():
             item_name = input("Enter the item to add: ")
             shopping_list.append(item_name)
             print(f"{item_name} added to the list.")
-
+            pass
+            
         elif choice == '2':
             # Prompt for and remove an item
             item_name = input("Enter the item to remove: ")
@@ -25,7 +26,8 @@ def main():
                 print(f"{item_name} removed from the list.")
             else:
                 print(f"{item_name} is not in the shopping list.")
-
+            pass
+                
         elif choice == '3':
             # Display the shopping list
             if shopping_list:
@@ -34,7 +36,8 @@ def main():
                     print(item)
             else:
                 print("The shopping list is empty.")
-
+            pass
+            
         elif choice == '4':
             print("Goodbye!")
             break
