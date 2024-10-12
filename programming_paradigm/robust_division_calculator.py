@@ -10,5 +10,5 @@ def safe_divide(numerator, denominator):
         return None
       
     except ValueError:
-        print("Invalid Input, pleas Enter Numbers Only ")
+        print("Error: Please enter numeric values only.")
         return None
